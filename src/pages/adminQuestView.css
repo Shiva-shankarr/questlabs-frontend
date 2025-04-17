@@ -1,0 +1,257 @@
+.admin-quest-view-container {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: calc(100vh - 64px);
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.admin-quest-view-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.featured-quest-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.edit-button {
+  background-color: #FF8C00;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 120px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.edit-button:hover {
+  background-color: #FFA500;
+}
+
+.quest-view-content {
+  max-width: 1200px;
+}
+
+.quest-background-section, 
+.quest-objectives-section, 
+.tools-required-section {
+  margin-bottom: 30px;
+}
+
+.quest-background-section h2, 
+.quest-objectives-section h2, 
+.tools-required-section h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.quest-background-section p, 
+.quest-objectives-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  white-space: pre-line;
+}
+
+.tools-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tools-list li {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+.tools-list li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #ff9800;
+}
+
+.tasks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.task-card {
+  background-color: #232323;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.task-card:hover {
+  background-color: #2c2c2c;
+  transform: translateY(-2px);
+}
+
+.task-card-content {
+  flex: 1;
+}
+
+.task-card h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.task-card p {
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.task-card-chevron {
+  color: #ff9800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid #ff9800;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.back-button {
+    background-color: #FFA500;
+  color: #000000;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #f5f5f5;
+}
+
+.edit-button {
+  background-color: transparent;
+  color: #FF8C00;
+  border: 1px solid #FF8C00;
+  padding: 10px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 20px;
+}
+
+.edit-button:hover {
+  background-color: rgba(255, 140, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .admin-quest-view-container {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-quest-view-container {
+    margin-left: 0;
+    padding: 15px;
+  }
+  
+  .admin-quest-view-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .form-actions {
+    padding: 15px;
+  }
+  
+  .back-button, .edit-button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    position: static;
+    padding: 10px;
+  }
+  
+  .back-button {
+    margin-right: 10px;
+  }
+  
+  .edit-button {
+    position: static;
+    margin-left: auto;
+  }
+} 

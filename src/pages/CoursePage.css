@@ -1,0 +1,670 @@
+/* CoursePage.css */
+
+/* General Page Styles */
+.course-page {
+    min-height: 100vh;
+    background-color: #0d1117;
+    color: #fff;
+  }
+  
+/* Featured Quest Section */
+.featured-quest {
+    position: relative;
+    height: 200px;
+    color: white;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+
+.featured-quest .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+}
+
+.featured-quest-content {
+    padding-left: 25px;
+}
+
+.featured-quest h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.featured-quest p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.open-quest-btn {
+    background-color: #ff9900 !important;
+    border-color: #ff9900;
+    color: rgb(18, 17, 17);
+    font-weight: bold;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+}
+
+.open-quest-btn:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+    color: black;
+  }
+  
+  .more-info-btn {
+    background-color: transparent;
+    border: 1px solid white !important;
+    color: white !important;
+    padding: 5px 20px;
+    font-size: 0.9rem;
+}
+
+.more-info-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Course Content */
+  .course-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0.5rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Quest Details Section */
+.quest-details-section {
+    background-color: #252525;
+    padding: 24px 18px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.quest-details-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #f8a100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.quest-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quest-background,
+.quest-objective,
+.quest-tools,
+.quest-resources {
+    margin-bottom: 16px;
+}
+
+.quest-background h3,
+.quest-objective h3,
+.quest-tools h3,
+.quest-resources h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #e3e3e3;
+    font-weight: 500;
+}
+
+.quest-content-box {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.content-list {
+    margin-left: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.content-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.tools-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tools-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ddd;
+}
+
+.tools-list li i {
+    color: #f8a100;
+    font-size: 1rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.resource-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.resource-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.resource-item i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #f0c14b;
+}
+
+.resource-item a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.resource-item a:hover {
+    text-decoration: underline;
+}
+
+/* Tasks Section */
+.tasks-section {
+    background-color: rgba(20, 20, 24, 0.75);
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.tasks-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: #f0c14b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+.task-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+.task-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+.task-item.completed {
+    border-left: 4px solid #4caf50;
+}
+
+.task-info {
+    flex: 1;
+  }
+  
+.task-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #f5f5f5;
+  }
+  
+  .task-description {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 8px;
+}
+
+.task-note {
+    background-color: rgba(240, 193, 75, 0.1);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #f0c14b;
+    display: flex;
+    align-items: center;
+}
+
+.task-note i {
+    margin-right: 6px;
+}
+
+.task-arrow {
+    font-size: 2rem;
+    color: #f0c14b;
+    margin-left: 10px;
+}
+
+/* Sidebar styling to match frame-10 */
+.course-sidebar {
+    background-color: rgba(20, 20, 24, 0.75);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Progress Section */
+.progress-section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-section h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.progress-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+}
+
+.count-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FF9900;
+    margin-bottom: 0.3rem;
+}
+
+.count-label {
+    color: #ccc;
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+  
+  .progress-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.stat:last-child {
+    border-bottom: none;
+}
+
+.stat .label {
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+.stat .value {
+    color: #FF9900;
+    font-weight: 600;
+  }
+  
+  /* Leaderboard Section */
+.leaderboard-section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 1.2rem;
+}
+
+.leaderboard-section h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .leaderboard-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.leaderboard-header {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.rank-header {
+    text-align: left;
+}
+
+.user-header {
+    text-align: left;
+}
+
+.completed-header, .streak-header {
+    text-align: center;
+  }
+  
+  .leaderboard-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 0.5fr;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    background-color: #2a2a2a;
+    border-radius: 3px;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+  }
+  
+  .rank {
+    color: #ccc;
+    font-weight: 600;
+}
+
+.username {
+    color: #fff;
+}
+
+.completed-tasks, .user-streak {
+    color: #ccc;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .course-content {
+        padding: 20px 15px;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    
+    .resources-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .featured-quest {
+      height: 250px;
+    }
+    
+    .featured-quest h2 {
+        font-size: 1.3rem;
+    }
+    
+    .featured-quest p {
+        font-size: 0.9rem;
+    }
+    
+    .course-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .quest-details-section,
+    .tasks-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .resources-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}
+
+@media (min-width: 992px) {
+    .quest-details-content {
+        grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@media (max-width: 991px) {
+    .course-content {
+        flex-direction: column;
+    }
+    
+    .main-content {
+      margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.loading-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-container .alert {
+  max-width: 600px;
+  width: 100%;
+}
+
+.error-container .btn {
+  margin-top: 1rem;
+}
+
+/* Toast Notification Styles */
+.toast-container {
+  z-index: 1050;
+}
+
+.toast-container .toast {
+  background-color: rgba(16, 185, 129, 0.95);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 350px;
+  transition: all 0.3s ease;
+}
+
+.toast-container .toast:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.toast-container .toast-header {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.toast-container .toast-header .btn-close {
+  color: white;
+  opacity: 0.8;
+  filter: invert(1) brightness(200%);
+}
+
+.toast-container .toast-header i {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.toast-container .toast-body {
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: white;
+}
+
+/* Real-time Indicators and Live Updates */
+.progress-section h3,
+.leaderboard-section h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.real-time-indicator {
+  display: inline-flex;
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: #66b3ff;
+  animation: pulse 2s infinite;
+}
+
+.real-time-indicator i {
+  font-size: 14px;
+}
+
+/* Refresh Button */
+.refresh-button {
+  background: transparent;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  transform: scale(1.1);
+}
+
+.refresh-button.refreshing svg {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Course title container for layout */
+.course-title-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Course metadata for last updated */
+.course-metadata {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.course-metadata.visible {
+  opacity: 1;
+}
+
+/* Empty Leaderboard */
+.empty-leaderboard {
+  padding: 15px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.empty-leaderboard p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Small Value Text */
+.value.small {
+  font-size: 0.75rem;
+}
+
+/* Current User Highlight in Leaderboard */
+.leaderboard-item.current-user {
+  background-color: rgba(255, 153, 0, 0.15);
+  border-left: 3px solid #FF9900;
+  padding-left: 5px;
+}
+
+/* Animation for real-time indicators */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Spin animation for refresh button */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.refresh-btn .spin {
+  animation: spin 1s linear infinite;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

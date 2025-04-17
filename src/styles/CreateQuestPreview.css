@@ -1,0 +1,146 @@
+.quest-preview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.quest-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.quest-preview-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.back-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.quest-preview-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.quest-details, .quest-tasks {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quest-details h2, .quest-tasks h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.quest-details p {
+  margin: 0.75rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.quest-details strong {
+  color: #333;
+}
+
+.quest-description {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.quest-description p {
+  margin: 0.5rem 0;
+}
+
+.task-item {
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.task-item:last-child {
+  margin-bottom: 0;
+}
+
+.task-item h3 {
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.task-item p {
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.task-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.task-option {
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+.task-option:hover {
+  background-color: #f0f0f0;
+}
+
+.task-option span {
+  font-weight: 600;
+  color: #333;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .quest-preview-container {
+    padding: 1rem;
+  }
+
+  .quest-preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .quest-preview-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-btn {
+    width: 100%;
+  }
+
+  .quest-details, .quest-tasks {
+    padding: 1.5rem;
+  }
+} 

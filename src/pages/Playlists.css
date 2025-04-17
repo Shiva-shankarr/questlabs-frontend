@@ -1,0 +1,293 @@
+.playlists-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #FFFFFF;
+  background-color: #1A1A1A;
+  min-height: calc(100vh - 60px);
+}
+
+.playlists-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.playlists-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+
+.playlists-header p {
+  color: #CCCCCC;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+.playlists-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.playlist-section {
+  margin-bottom: 1.5rem;
+}
+
+.playlist-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* Match frame-13 grid layout exactly */
+.quest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.quest-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.quest-card {
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  height: 100%;
+}
+
+.quest-card:hover {
+  transform: translateY(-4px);
+}
+
+.quest-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.quest-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.favorite-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.heart-icon {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.heart-icon.filled {
+  color: #ff4757;
+}
+
+/* Quest info section */
+.quest-info {
+  padding: 1rem;
+}
+
+.quest-title {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quest-instructor {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+/* Loading state */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #fff;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333;
+  border-top: 3px solid #FFB84D;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error state */
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  color: #ff4757;
+}
+
+.error-message button {
+  background: #5C3A11;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.error-message button:hover {
+  background: #7a5021;
+}
+
+/* Auth message (when not logged in) */
+.auth-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+  background: #2a2a2a;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 4rem auto;
+}
+
+.auth-message h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.auth-message p {
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.login-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #5C3A11;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: #7a5021;
+}
+
+/* No playlists message */
+.no-playlists {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+}
+
+/* Refresh button styling */
+.refresh-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #5C3A11;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background: #7a5021;
+}
+
+/* Debug info panel */
+.debug-info {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: #666;
+  font-size: 0.8rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.debug-info p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .quest-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .quest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .playlists-container {
+    padding: 1rem;
+  }
+
+  .quest-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .playlists-header h1 {
+    font-size: 1.5rem;
+  }
+}

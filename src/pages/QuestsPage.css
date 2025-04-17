@@ -1,0 +1,263 @@
+/* QuestsPage.css */
+
+.quests-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+  color: #fff;
+  min-height: 90vh;
+}
+
+/* Add specific class prefix to all selectors to avoid conflicts */
+.quests-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.quests-header h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Rename to be more specific to this component */
+.quests-search-container {
+  position: relative;
+  width: 300px;
+}
+
+.quests-search-input-container {
+  display: flex;
+  align-items: center;
+  background: #2A2A2A;
+  border: 1px solid #5C3A11;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.quests-search-icon {
+  color: #5C3A11;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.quests-search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.quests-search-input::placeholder {
+  color: #8B8B8B;
+}
+
+/* Quest sections */
+.quest-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-heading {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+
+/* Quest grid and cards */
+.quest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.quest-card {
+  background: #2A2A2A;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.quest-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.quest-card-img-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.quest-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.favorite-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.heart-icon {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.heart-icon-filled {
+  color: #FF4757;
+  font-size: 1rem;
+}
+
+.quest-card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.quest-card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.quest-card-text {
+  font-size: 0.9rem;
+  color: #8B8B8B;
+  margin: 0;
+}
+
+/* Loading state */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25rem solid #5C3A11;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Error and empty states */
+.error-container,
+.empty-state,
+.no-quests,
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  background-color: #2A2A2A;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.retry-btn {
+  background-color: #5C3A11;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.retry-btn:hover {
+  background-color: #7B4F1B;
+}
+
+/* Search results */
+.search-results {
+  margin-bottom: 2.5rem;
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+  .quest-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .quest-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .quests-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .quests-search-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .quests-page {
+    padding: 1rem;
+  }
+  
+  .quest-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
